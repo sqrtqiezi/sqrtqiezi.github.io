@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="翻译,Laravel," />
 
 
 
@@ -94,14 +94,14 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
 <meta property="og:description" content="原文地址：[https://laravel-news.com/uptime-monitor]
 互联网日益成为很多人不可或缺的一部分，或者他们的收入来源。因此大多数网络应用即使仅停止数秒钟都不可接受。
 Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是提供一个简单和强大的方式来监控你的网站的正常运行，和 SSL 证书到期日期。当你的网站停止运行时，它会通过灵">
-<meta property="og:image" content="http://qiezi.io/images/laravel-uptime-monitor-imag1.png">
-<meta property="og:updated_time" content="2017-01-13T10:18:58.000Z">
+<meta property="og:image" content="http://qiezi.io/images/laravel-uptime-monitor-image1.png">
+<meta property="og:updated_time" content="2017-01-13T10:29:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel Uptime Monitor">
 <meta name="twitter:description" content="原文地址：[https://laravel-news.com/uptime-monitor]
 互联网日益成为很多人不可或缺的一部分，或者他们的收入来源。因此大多数网络应用即使仅停止数秒钟都不可接受。
 Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是提供一个简单和强大的方式来监控你的网站的正常运行，和 SSL 证书到期日期。当你的网站停止运行时，它会通过灵">
-<meta name="twitter:image" content="http://qiezi.io/images/laravel-uptime-monitor-imag1.png">
+<meta name="twitter:image" content="http://qiezi.io/images/laravel-uptime-monitor-image1.png">
 
 
 
@@ -296,7 +296,7 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
 <p>确定你已经添加 [Laravel Cron 入口] 到你的服务器之中，以使 <strong>Laravel Uptime Monitor</strong> 命令可以定期运行：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">** ** ** ** ** php /path/to/artisan schedule:run &gt;&gt; /dev/<span class="keyword">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></div></pre></td></tr></table></figure></p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>安装完成之后，你可以使用 monitor:create 命令来添加需要监控的网站。如果你添加 https:// 开头的 URL，程序包也开始监控 SSL 证书：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan monitor:create https://laravel-news.com</div></pre></td></tr></table></figure></p>
 <p>可以选择的，它会询问你是否要在网战的响应中查找特定的字符串。如果字符串没有出现，那么它会认为运行检查失败。</p>
-<p>等待几分钟之后，运行命令 php artisan monitor:list<br><img src="/images/laravel-uptime-monitor-imag1.png" alt=""></p>
+<p>等待几分钟之后，运行命令 php artisan monitor:list<br><img src="/images/laravel-uptime-monitor-image1.png" alt=""></p>
 <p>它将以列表的形式显示所有被监控的网站正常运行时间和证书检查的结果，证书检查会包含 SSL 证书的一些具体信息。</p>
 <p>还有  monitor:delete， monitor:enable，和 monitor:disable 这些命令。第一个用于从监控列表中删除网站，其他两个命令用于启用和禁用所监控的网站：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">php artisan monitor:delete http://example.com</div><div class="line">php artisan monitor:enable http://example.com</div><div class="line">php artisan monitor:disable http://example.com</div></pre></td></tr></table></figure></p>
 <h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><p>如果你打开配置文件 <strong>config/laravel-uptime-monitor.php</strong>，你会看到 <strong>Laravel Uptime Monitor</strong>有很多配置项，是高度可定制的。请注意如下的重要选项：</p>
@@ -310,7 +310,7 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
 <li><strong>fire_monitor_failed_event_after_consecutive_failures</strong> 用于指定触发 <strong>Spatie\UptimeMonitor\Events\MonitorFailed</strong> 事件之前，尝试运行检查失败的次数，默认值为 2。</li>
 <li><strong>fire_expiring_soon_event_if_certificate_expires_within_days</strong>，当 SSL 证书中剩余的天数少于你为此选项指定的天数时，将触发 <strong>SslExpiresSoon</strong> 事件。</li>
 </ul>
-<p>如果你想要一个强大的方法监控网站运行和 SSL 证书过期日期，请尝试 <strong>Laravel Uptime Monitor</strong></p>
+<p>最后，如果你想要一个强大的方法监控网站运行和 SSL 证书过期日期，请尝试一下 <strong>Laravel Uptime Monitor</strong></p>
 
       
     </div>
@@ -331,6 +331,14 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/翻译/" rel="tag">#翻译</a>
+          
+            <a href="/tags/Laravel/" rel="tag">#Laravel</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -343,6 +351,10 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/13/how-php-executes-from-source-code-to-render/" rel="prev" title="PHP是如何执行的 - 从源代码到渲染">
+                PHP是如何执行的 - 从源代码到渲染 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -410,13 +422,20 @@ Spatie 发布了一个非常方便的包 Laravel Uptime Monitor，其目的是�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

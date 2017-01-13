@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,翻译," />
 
 
 
@@ -84,15 +84,40 @@
 
 
 
-<meta name="description" content="唯以奔跑忘不安">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Niu Jin's Notes">
-<meta property="og:url" content="http://qiezi.io/index.html">
+<meta name="description" content="原文地址：[https://www.sitepoint.com/how-php-executes-from-source-code-to-render/]
+简介当我们执行一段 PHP 代码时，会发生很多事情。一般来说，PHP 解释器执行代码时会经历四个阶段：
+
+词法分析
+语法分析
+汇编
+解释执行
+
+第一阶段 - 词法分析词法分析（或者说符号化）是将字符串（这里特指 PHP 源代码）转换成一系列单词">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP是如何执行的 - 从源代码到渲染">
+<meta property="og:url" content="http://qiezi.io/2017/01/13/how-php-executes-from-source-code-to-render/index.html">
 <meta property="og:site_name" content="Niu Jin's Notes">
-<meta property="og:description" content="唯以奔跑忘不安">
+<meta property="og:description" content="原文地址：[https://www.sitepoint.com/how-php-executes-from-source-code-to-render/]
+简介当我们执行一段 PHP 代码时，会发生很多事情。一般来说，PHP 解释器执行代码时会经历四个阶段：
+
+词法分析
+语法分析
+汇编
+解释执行
+
+第一阶段 - 词法分析词法分析（或者说符号化）是将字符串（这里特指 PHP 源代码）转换成一系列单词">
+<meta property="og:updated_time" content="2017-01-13T10:46:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Niu Jin's Notes">
-<meta name="twitter:description" content="唯以奔跑忘不安">
+<meta name="twitter:title" content="PHP是如何执行的 - 从源代码到渲染">
+<meta name="twitter:description" content="原文地址：[https://www.sitepoint.com/how-php-executes-from-source-code-to-render/]
+简介当我们执行一段 PHP 代码时，会发生很多事情。一般来说，PHP 解释器执行代码时会经历四个阶段：
+
+词法分析
+语法分析
+汇编
+解释执行
+
+第一阶段 - 词法分析词法分析（或者说符号化）是将字符串（这里特指 PHP 源代码）转换成一系列单词">
 
 
 
@@ -113,9 +138,9 @@
 
 
 
-  <link rel="canonical" href="http://qiezi.io/"/>
+  <link rel="canonical" href="http://qiezi.io/2017/01/13/how-php-executes-from-source-code-to-render/"/>
 
-  <title> Niu Jin's Notes </title>
+  <title> PHP是如何执行的 - 从源代码到渲染 | Niu Jin's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -237,10 +260,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/01/13/how-php-executes-from-source-code-to-render/" itemprop="url">
-                  PHP是如何执行的 - 从源代码到渲染
-                </a>
+                PHP是如何执行的 - 从源代码到渲染
               
             
           </h1>
@@ -280,9 +300,7 @@
       
 
       
-        
-          
-            <p>原文地址：[<a href="https://www.sitepoint.com/how-php-executes-from-source-code-to-render/" target="_blank" rel="external">https://www.sitepoint.com/how-php-executes-from-source-code-to-render/</a>]</p>
+        <p>原文地址：[<a href="https://www.sitepoint.com/how-php-executes-from-source-code-to-render/" target="_blank" rel="external">https://www.sitepoint.com/how-php-executes-from-source-code-to-render/</a>]</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>当我们执行一段 PHP 代码时，会发生很多事情。一般来说，PHP 解释器执行代码时会经历四个阶段：</p>
 <ol>
 <li>词法分析</li>
@@ -323,258 +341,61 @@
 <p>我希望这篇文章帮助您更好的从整体上理解 PHP 解释器，并且展现出 OPcache 扩展（对于它的缓存和优化能力）的重要性。</p>
 <h2 id="原文作者-Thomas-Punt"><a href="#原文作者-Thomas-Punt" class="headerlink" title="原文作者 - Thomas Punt"></a>原文作者 - Thomas Punt</h2><p>Tomas 是来自英国最近毕业的 Web Technologies 学生。他对编程有强烈的兴趣，尤其关注服务端 Web 开发技术（特别是 PHP 和 Exlixir）。他在空闲时间为 PHP 和其他开源项目做贡献，并撰写他感兴趣的主题。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/13/Laravel-Uptime-Monitor/" itemprop="url">
-                  Laravel Uptime Monitor
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-13T17:54:59+08:00" content="2017-01-13">
-              2017-01-13
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/php/" rel="tag">#php</a>
           
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/翻译/" rel="tag">#翻译</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>原文地址：[<a href="https://laravel-news.com/uptime-monitor" target="_blank" rel="external">https://laravel-news.com/uptime-monitor</a>]</p>
-<p>互联网日益成为很多人不可或缺的一部分，或者他们的收入来源。因此大多数网络应用即使仅停止数秒钟都不可接受。</p>
-<p>Spatie 发布了一个非常方便的包 <strong>Laravel Uptime Monitor</strong>，其目的是提供一个简单和强大的方式来监控你的网站的正常运行，和 SSL 证书到期日期。当你的网站停止运行时，它会通过灵活的 Laravel 5.3 通知系统通知你。此外，当你的网站再次启动时，这个包会通知你停机时长。</p>
-<p>让我们看一下如何设置和使用这个包。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，通过 Composer 安装 <strong>Laravel Uptime Monitor</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require spatie/laravel-uptime-monitor</div></pre></td></tr></table></figure></p>
-<p>在 <strong>config/app.php</strong> 中添加服务提供者：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">providers<span class="string">' =&gt; [</span></div><div class="line">    ...</div><div class="line">    Spatie\UptimeMonitor\UptimeMonitorServiceProvider::class,</div><div class="line">];</div></pre></td></tr></table></figure></p>
-<p>然后，在你的终端执行如下命令，生成配置文件：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan vendor:publish --provider=<span class="string">"Spatie\UptimeMonitor\UptimeMonitorServiceProvider"</span></div></pre></td></tr></table></figure></p>
-<p>运行如下迁移命令在数据库中生成 <strong>monitors</strong> 相关表：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div></pre></td></tr></table></figure></p>
-<p>最后，打开 <strong> app/Console/Kernel.php</strong> 设置调度命令 <strong>monitor:check-uptime</strong> 和 <strong>monitor:check-certificate</strong>：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">schedule</span><span class="params">(Schedule $schedule)</span></span></div><div class="line">&#123;</div><div class="line">    $schedule-&gt;command(<span class="string">'monitor:check-uptime'</span>)-&gt;everyMinute();</div><div class="line">    $schedule-&gt;command(<span class="string">'monitor:check-certificate'</span>)-&gt;daily();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>确定你已经添加 [Laravel Cron 入口] 到你的服务器之中，以使 <strong>Laravel Uptime Monitor</strong> 命令可以定期运行：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">** ** ** ** ** php /path/to/artisan schedule:run &gt;&gt; /dev/<span class="keyword">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></div></pre></td></tr></table></figure></p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>安装完成之后，你可以使用 monitor:create 命令来添加需要监控的网站。如果你添加 https:// 开头的 URL，程序包也开始监控 SSL 证书：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan monitor:create https://laravel-news.com</div></pre></td></tr></table></figure></p>
-<p>可以选择的，它会询问你是否要在网战的响应中查找特定的字符串。如果字符串没有出现，那么它会认为运行检查失败。</p>
-<p>等待几分钟之后，运行命令 php artisan monitor:list<br><img src="/images/laravel-uptime-monitor-image1.png" alt=""></p>
-<p>它将以列表的形式显示所有被监控的网站正常运行时间和证书检查的结果，证书检查会包含 SSL 证书的一些具体信息。</p>
-<p>还有  monitor:delete， monitor:enable，和 monitor:disable 这些命令。第一个用于从监控列表中删除网站，其他两个命令用于启用和禁用所监控的网站：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">php artisan monitor:delete http://example.com</div><div class="line">php artisan monitor:enable http://example.com</div><div class="line">php artisan monitor:disable http://example.com</div></pre></td></tr></table></figure></p>
-<h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><p>如果你打开配置文件 <strong>config/laravel-uptime-monitor.php</strong>，你会看到 <strong>Laravel Uptime Monitor</strong>有很多配置项，是高度可定制的。请注意如下的重要选项：</p>
-<ul>
-<li>首先，你可以自定义通知选项，为任何 <strong>Laravel Uptime Monitor</strong> 软件包可能触发的事件（它提供六种不同的事件类型）添加你的通知频道。你可以轻松的使用任何 Laravel 5.3 通知系统支持的频道，例如 Slack 或者邮件等。</li>
-<li>如果你在多个地区使用 <strong>Laravel Uptime Monitor</strong> ，你可以使用 <strong>location</strong> 来区分不同的地区，<strong>location</strong> 会和每个消息通知一起发送给你。</li>
-<li><strong>resend_uptime_check_failed_notification_every_minutes</strong> 选项用于指定你的网站关闭时，发出通知的间隔时间，默认为 60 分钟。</li>
-<li>接下来的两个选项，一个用于指定通知的邮件，另一个用于如果你使用了 Slack 通知频道时，指定的 <strong>webhook_url</strong>。</li>
-<li><strong>run_interval_in_minutes</strong> 用于指定两次运行检查的间隔时间。注意，如果运行检查失败，软件包将忽略此选项，并且开始每分钟检查该站点。</li>
-<li><strong>timeout_per_site</strong> 用于指定在检查过程中放弃之前所需等待的时间，默认为10秒。</li>
-<li><strong>fire_monitor_failed_event_after_consecutive_failures</strong> 用于指定触发 <strong>Spatie\UptimeMonitor\Events\MonitorFailed</strong> 事件之前，尝试运行检查失败的次数，默认值为 2。</li>
-<li><strong>fire_expiring_soon_event_if_certificate_expires_within_days</strong>，当 SSL 证书中剩余的天数少于你为此选项指定的天数时，将触发 <strong>SslExpiresSoon</strong> 事件。</li>
-</ul>
-<p>最后，如果你想要一个强大的方法监控网站运行和 SSL 证书过期日期，请尝试一下 <strong>Laravel Uptime Monitor</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/13/Laravel-Uptime-Monitor/" rel="next" title="Laravel Uptime Monitor">
+                <i class="fa fa-chevron-left"></i> Laravel Uptime Monitor
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/04/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-11T23:15:42+08:00" content="2016-04-11">
-              2016-04-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -582,6 +403,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -601,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -645,6 +479,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一阶段-词法分析"><span class="nav-number">2.</span> <span class="nav-text">第一阶段 - 词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶段-语法分析"><span class="nav-number">3.</span> <span class="nav-text">第二阶段 - 语法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三阶段-汇编"><span class="nav-number">4.</span> <span class="nav-text">第三阶段 - 汇编</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四阶段-解释执行"><span class="nav-number">5.</span> <span class="nav-text">第四阶段 - 解释执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结尾"><span class="nav-number">6.</span> <span class="nav-text">结尾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原文作者-Thomas-Punt"><span class="nav-number">7.</span> <span class="nav-text">原文作者 - Thomas Punt</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -748,6 +593,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
