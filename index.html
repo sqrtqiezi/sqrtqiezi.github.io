@@ -261,6 +261,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/13/a-brief-history-of-laravel/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/13/a-brief-history-of-laravel/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -372,6 +379,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/13/how-php-executes-from-source-code-to-render/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/13/how-php-executes-from-source-code-to-render/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -506,6 +520,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/13/Laravel-Uptime-Monitor/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/13/Laravel-Uptime-Monitor/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -536,7 +557,7 @@
 <p>然后，在你的终端执行如下命令，生成配置文件：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan vendor:publish --provider=<span class="string">"Spatie\UptimeMonitor\UptimeMonitorServiceProvider"</span></div></pre></td></tr></table></figure></p>
 <p>运行如下迁移命令在数据库中生成 <strong>monitors</strong> 相关表：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div></pre></td></tr></table></figure></p>
 <p>最后，打开 <strong> app/Console/Kernel.php</strong> 设置调度命令 <strong>monitor:check-uptime</strong> 和 <strong>monitor:check-certificate</strong>：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">schedule</span><span class="params">(Schedule $schedule)</span></span></div><div class="line">&#123;</div><div class="line">    $schedule-&gt;command(<span class="string">'monitor:check-uptime'</span>)-&gt;everyMinute();</div><div class="line">    $schedule-&gt;command(<span class="string">'monitor:check-certificate'</span>)-&gt;daily();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>确定你已经添加 [Laravel Cron 入口] 到你的服务器之中，以使 <strong>Laravel Uptime Monitor</strong> 命令可以定期运行：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">** ** ** ** ** php /path/to/artisan schedule:run &gt;&gt; /dev/<span class="keyword">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>确定你已经添加 <a href="https://laravel-china.org/docs/5.3/scheduling" target="_blank" rel="external">Laravel Cron 入口</a> 到你的服务器之中，以使 <strong>Laravel Uptime Monitor</strong> 命令可以定期运行：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">** ** ** ** ** php /path/to/artisan schedule:run &gt;&gt; /dev/<span class="keyword">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></div></pre></td></tr></table></figure></p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>安装完成之后，你可以使用 monitor:create 命令来添加需要监控的网站。如果你添加 https:// 开头的 URL，程序包也开始监控 SSL 证书：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan monitor:create https://laravel-news.com</div></pre></td></tr></table></figure></p>
 <p>可以选择的，它会询问你是否要在网战的响应中查找特定的字符串。如果字符串没有出现，那么它会认为运行检查失败。</p>
 <p>等待几分钟之后，运行命令 php artisan monitor:list<br><img src="/images/laravel-uptime-monitor-image1.png" alt=""></p>
@@ -625,6 +646,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/11/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/11/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -872,6 +900,25 @@
 
 
 
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'sqrtqiezi';
+      var disqus_identifier = 'index.html';
+      var disqus_title = "";
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
   
 
 
