@@ -289,7 +289,8 @@
       
         
           
-            <p>按计划 Laravel 5.4 将于下周发布，它已经包含了许多伟大的新功能，不过团队又悄悄的贡献两个崭新的中间件。TrimStrings 和 ConvertEmptyStringsToNull。</p>
+            <p>原文地址: [<a href="https://laravel-news.com/laravel-5-4-middleware" target="_blank" rel="external">https://laravel-news.com/laravel-5-4-middleware</a>]</p>
+<p>按计划 Laravel 5.4 将于下周发布，它已经包含了许多伟大的新功能，不过团队又悄悄的贡献两个崭新的中间件。TrimStrings 和 ConvertEmptyStringsToNull。</p>
 <h2 id="TrimStrings-中间件"><a href="#TrimStrings-中间件" class="headerlink" title="TrimStrings 中间件"></a>TrimStrings 中间件</h2><p>如名称所示，TrimStrings 中间件会自动修剪所有请求数据，这样你就不用担心你的表达字段中不经意的添加了额外的空格。</p>
 <p>例如，假设你有一个需要电子邮件地址的简报注册。以前，如果有人输入了额外的空格，它会像这样：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd(request(<span class="string">'email'</span>));</div><div class="line"><span class="comment">// 'demo@example.org '</span></div></pre></td></tr></table></figure>
