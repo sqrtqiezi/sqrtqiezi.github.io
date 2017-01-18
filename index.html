@@ -238,6 +238,120 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/19/laravel-5-4-middleware/" itemprop="url">
+                  [Laravel 5.4]两个新增的中间件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-19T06:08:21+08:00" content="2017-01-19">
+              2017-01-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/19/laravel-5-4-middleware/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/19/laravel-5-4-middleware/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Laravel 5.4 计划于下周发布，它已经包含了许多伟大的新功能，不过团队悄悄的又贡献两个新中间件。TrimStrings 和 ConvertEmptyStringsToNull。</p>
+<h2 id="TrimStrings-中间件"><a href="#TrimStrings-中间件" class="headerlink" title="TrimStrings 中间件"></a>TrimStrings 中间件</h2><p>如名称所示，TrimStrings 中间件会自动修剪所有请求数据，这样你就不用担心你的表达字段中不经意的添加了额外的空格。</p>
+<p>例如，假设你有一个需要电子邮件地址的简报注册。以前，如果有人输入了额外的空格，它会像这样：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd(request(<span class="string">'email'</span>));</div><div class="line"><span class="comment">// 'demo@example.org '</span></div></pre></td></tr></table></figure>
+<p>现在，通过将 TrimStrings 中间件添加到 App/Kernel.php:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> $middleware = [</div><div class="line">    \Illuminate\Foundation\Http\Middleware\TrimStrings::class,</div></pre></td></tr></table></figure>
+<p>这将获得如下结果：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd(request(<span class="string">'email'</span>));</div><div class="line"><span class="comment">// 'demo@example.org'</span></div></pre></td></tr></table></figure>
+<h2 id="ConvertEmptyStringsToNull-中间件"><a href="#ConvertEmptyStringsToNull-中间件" class="headerlink" title="ConvertEmptyStringsToNull 中间件"></a>ConvertEmptyStringsToNull 中间件</h2><p>与 TrimStrings 搭配的是一个新的 ConvertEmptyStringsToNull ，其工作方式基本相同。较好的适用场景是，将一个表单的非必要字段映射为数据库可以为空的列。</p>
+<p>例如，假设你有一个增值税字段，供用户输入报税编码。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"text"</span> name=<span class="string">"vat"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>在以前如果你把字段留空，它会返回一个空字符串：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd(request(<span class="string">'vat'</span>));</div><div class="line"><span class="comment">// ''</span></div></pre></td></tr></table></figure>
+<p>现在通过 ConvertEmptyStringsToNull 中间件的处理，结果为 null :</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd(request(<span class="string">'vat'</span>));</div><div class="line"><span class="comment">// null</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/13/a-brief-history-of-laravel/" itemprop="url">
                   Laravel 简史
                 </a>
@@ -753,7 +867,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
